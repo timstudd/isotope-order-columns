@@ -1,6 +1,6 @@
 /*!
  * orderColumns layout mode for Isotope
- * v1.0.0
+ * v1.0.1
  */
 
 /*jshint browser: true, devel: false, strict: true, undef: true, unused: true */
@@ -79,7 +79,7 @@
 						break;
 					// Smallest column, take one from right
 					} else if (columns[i].sum() == columns.minSum() && columnSum < columns.maxSum() && columns[i+1].length > 0) {
-						columns[i].push(columns[i+1].pop());
+						columns[i].push(columns[i+1].shift());
 						sizes.push(columns.maxSum());
 					}
 				}
